@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author Ulan
@@ -31,5 +32,15 @@ public class MelonServiceImpl implements MelonService {
     @Override
     public Melon save(Melon melon) {
         return melonRepository.save(melon);
+    }
+
+    @Override
+    public void deleteById(Long melonId) {
+        melonRepository.deleteById(melonId);
+    }
+
+    @Override
+    public Optional<Melon> findById(Long melonId) {
+        return melonRepository.findById(melonId);
     }
 }

@@ -3,6 +3,7 @@ package iitu.edu.wmelonback.service;
 import iitu.edu.wmelonback.model.Melon;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author Ulan
@@ -14,4 +15,9 @@ public interface MelonService {
     List<Melon> findAll();
 
     Melon save(Melon melon);
+
+    void deleteById(Long melonId);
+
+    Optional<Melon> findById(Long melonId);
+
 }

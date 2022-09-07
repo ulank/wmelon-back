@@ -1,7 +1,7 @@
 
 CREATE TABLE products.melon
 (
-    id BIGINT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     type VARCHAR(50) NOT NULL,
     color VARCHAR(25) NOT NULL,
     location VARCHAR(50) NOT NULL,

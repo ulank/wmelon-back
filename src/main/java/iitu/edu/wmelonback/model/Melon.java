@@ -1,10 +1,8 @@
 package iitu.edu.wmelonback.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.hibernate.annotations.CollectionId;
 
 import javax.persistence.*;
-import java.time.Instant;
 import java.util.Date;
 
 /**
@@ -17,6 +15,8 @@ import java.util.Date;
 public class Melon {
 
     @Id
+    @Column(name="id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "type")
